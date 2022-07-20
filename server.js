@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const dozieRoutes = require("./routes/dozieRoutes.js");
 
@@ -7,6 +8,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
+app.use(cors());
 
 //setup routes
 app.use("/v1/dozie", dozieRoutes);
