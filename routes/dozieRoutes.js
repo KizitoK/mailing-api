@@ -8,8 +8,8 @@ router.get("/", function (req, res) {
 
 router.post("/sendMail", async (req, res) => {
   try {
-    let { email, subject, text, name } = req.body;
-    text = `Mail from ${name} at ${email}. ${subject} `;
+    let { email, subject, text, fullname } = req.body;
+    text = `Mail from ${fullname} at ${email}. ${subject} `;
     await sendEmail(email, subject, text);
 
     res.send({
