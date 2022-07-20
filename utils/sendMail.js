@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 
-const sendEmail = async (email, subject, text) => {
+const sendEmail = async (email, subject, textField) => {
   try {
     var transporter = nodemailer.createTransport({
       service: "gmail",
@@ -15,8 +15,8 @@ const sendEmail = async (email, subject, text) => {
       to: "kelechikizito4@gmail.com",
       subject: subject,
       //Adding HTML and Text Version, so the email will not land up in the spam folder
-      html: text,
-      text: text,
+      html: textField,
+      text: textField,
     });
 
     console.log("email sent successfully");

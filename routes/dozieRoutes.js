@@ -8,9 +8,12 @@ router.get("/", function (req, res) {
 
 router.post("/sendMail", async (req, res) => {
   try {
-    let { email, subject, text, fullname } = req.body;
-    text = `Mail from ${fullname} at ${email}. ${subject} `;
-    await sendEmail(email, subject, text);
+    let { email, subject, textField, fullname } = req.body;
+    textField = `
+      <b> Mail from ${fullname} at ${email} </b>. <br>
+      ${textField}
+    `;
+    await sendEmail(email, subject, textField);
 
     res.send({
       data: {},
@@ -20,7 +23,7 @@ router.post("/sendMail", async (req, res) => {
   } catch (error) {
     res.send({
       data: {},
-      message: "Message not sent!",
+      message: "Message not sent, An erroe was encountered!",
       status: 1,
     });
     console.log(error);
