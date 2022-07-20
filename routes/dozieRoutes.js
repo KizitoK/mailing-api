@@ -18,7 +18,11 @@ router.post("/sendMail", async (req, res) => {
       status: 0,
     });
   } catch (error) {
-    res.send("An error occured");
+    res.send({
+      data: {},
+      message: "Message not sent!",
+      status: 1,
+    });
     console.log(error);
   }
 });
