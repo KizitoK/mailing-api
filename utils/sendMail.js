@@ -12,7 +12,7 @@ const sendEmail = async (email, subject, textField) => {
 
     await transporter.sendMail({
       sender: email,
-      to: "kelechikizito4@gmail.com",
+      to: "nwakadozie76@gmail.com",
       subject: subject,
       //Adding HTML and Text Version, so the email will not land up in the spam folder
       html: textField,
