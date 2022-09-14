@@ -8,12 +8,12 @@ router.get("/", function (req, res) {
 
 router.post("/sendMail", async (req, res) => {
   try {
-    let { email, subject, textField, fullname } = req.body;
+    let { email, subject, textField, fullname, to } = req.body;
     textField = `
       <b> Mail from ${fullname} at ${email} </b>. <br>
       ${textField}
     `;
-    await sendEmail(email, subject, textField);
+    await sendEmail(email, subject, textField, to);
 
     res.send({
       data: {},
