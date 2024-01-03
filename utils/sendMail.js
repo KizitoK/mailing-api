@@ -19,7 +19,7 @@ const sendEmail = async (email, subject, textField, to) => {
       text: textField,
     });
 
-    console.log("email sent successfully");
+    console.log(`Email sent successfully to ${to}`);
   } catch (error) {
     console.log(error, "email not sent");
   }

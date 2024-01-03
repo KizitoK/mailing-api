@@ -1,27 +1,28 @@
-const subject = "Welcome to the Volunteer Team for Hack4FUTO 2.0!"
+const subject = "Congratulations! Your Application for the Hackathon Has Been Accepted!"
 
 const text =
     `
-Dear Volunteers, <br><br>
+    Dear Applicants, <br><br>
 
-I hope this message finds you in good spirits. On behalf of the organizing team for Hack4FUTO 2.0, <br>
-I am pleased to announce that your application to volunteer have been accepted. Welcome to the team! <br>
+    I trust this email finds you well. I am pleased to inform you that your application for the Hackathon has been accepted! Congratulations! <br>
 
-Your collective enthusiasm and commitment to being part of Hack4FUTO 2.0 are truly appreciated. <br>
-Together, we can make a significant impact and create a memorable experience for all involved. <br><br>
+    Your innovative approach and dedication to finding solutions for Hack4FUTO truly stood out to our evaluation committee.<br> 
+    We believe that your unique perspective and skills will make a significant contribution to the success of the challenge. <br>
 
-Please join the group chat at your earliest convenience using the following link: <br> link <br><br>
+    As a selected participant, you will now move forward to the next phase of the challenge, which involves details about the next steps, such as project development, mentorship, or any additional requirements. <br><br>
 
-Thank you for your dedication to our cause. We look forward to working together and creating memorable moments at Hack4FUTO 2.0.<br><br>
+    The next steps, timelines, and any additional information you may need will be commucated here: https://chat.whatsapp.com/Lw1SPb66eXpEGAFcq5yOJm do well to invite your teammates to the group chat <br><br>
 
-Best regards, <br><br>
+    We are excited to embark on this journey with you and look forward to witnessing the positive impact your solutions will have.<br><br>
 
-Marshall Odii <br>
-Convener Hack4FUTO 2.0.
-`
+    Best regards, <br><br>
+
+    Marshall Odii <br>
+    Convener Hack4FUTO 2.0.
+    `
 
 
+const volunteers = []
 
-const volunteers = process.env.volunteers
 
 module.exports = { volunteers, text, subject }
